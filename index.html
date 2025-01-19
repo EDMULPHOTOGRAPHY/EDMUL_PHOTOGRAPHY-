@@ -3,46 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=mailto:mailmedia673@gmail.com?subject=Appointment%20Request%20for%20Shooting&body=Hello%20Edmul%20Photography,%0D%0AI%20am%20interested%20in%20booking%20a%20photoshoot.%0D%0AThank%20you!" />
-    <title>Edmul Photography</title>
+    <meta http-equiv="refresh" content="3; url=mailto:mailmedia673@gmail.com?subject=Appointment%20Request%20for%20Shooting&body=Hello%20Edmul%20Photography,%0D%0AI%20am%20interested%20in%20booking%20a%20photoshoot.%0D%0AThank%20you!" />
+    <title>Redirecting...</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
-            background: #f4f4f9;
-            color: #333;
+            background: #000; /* Schwarzer Hintergrund */
+            color: #FFD700; /* Goldene Schrift */
         }
         .container {
             max-width: 800px;
             margin: 100px auto;
             padding: 20px;
-            background: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.05); /* Leicht transparentes Schwarz */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
             border-radius: 10px;
         }
         h1 {
-            color: #444;
+            color: #FFD700; /* Gold */
         }
         p {
             font-size: 18px;
             line-height: 1.6;
+            color: #FFD700; /* Gold */
         }
         a {
-            color: #0066cc;
+            color: #FFD700; /* Gold */
             text-decoration: none;
             font-weight: bold;
+            border-bottom: 1px solid #FFD700; /* Dezente Linie */
         }
         a:hover {
             text-decoration: underline;
         }
     </style>
+    <script>
+        let seconds = 3; // Countdown-Zeit
+        function updateCountdown() {
+            const countdownElement = document.getElementById("countdown");
+            if (seconds > 0) {
+                countdownElement.innerText = seconds;
+                seconds--;
+                setTimeout(updateCountdown, 1000);
+            }
+        }
+    </script>
 </head>
-<body>
+<body onload="updateCountdown()">
     <div class="container">
-        <h1>Welcome to Edmul Photography</h1>
-        <p>If you are not redirected to your email application, please click the link below:</p>
+        <h1>Redirecting...</h1>
+        <p>You will be redirected to your email application in <span id="countdown">3</span> seconds.</p>
+        <p>If the redirection does not work, click the link below:</p>
         <p>
             <a href="mailto:mailmedia673@gmail.com?subject=Appointment%20Request%20for%20Shooting&body=Hello%20Edmul%20Photography,%0D%0AI%20am%20interested%20in%20booking%20a%20photoshoot.%0D%0AThank%20you!">
                 Send us an Email
