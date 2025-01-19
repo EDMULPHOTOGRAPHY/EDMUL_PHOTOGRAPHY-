@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="3; url=mailto:mailmedia673@gmail.com?subject=Appointment%20Request%20for%20Shooting&body=Hello%20Edmul%20Photography,%0D%0AI%20am%20interested%20in%20booking%20a%20photoshoot.%0D%0AThank%20you!" />
     <title>Redirecting...</title>
     <style>
         body {
@@ -48,6 +47,8 @@
                 countdownElement.innerText = seconds;
                 seconds--;
                 setTimeout(updateCountdown, 1000);
+            } else {
+                window.location.href = "mailto:mailmedia673@gmail.com?subject=Appointment%20Request%20for%20Shooting&body=Hello%20Edmul%20Photography,%0D%0AI%20am%20interested%20in%20booking%20a%20photoshoot.%0D%0AThank%20you!";
             }
         }
     </script>
