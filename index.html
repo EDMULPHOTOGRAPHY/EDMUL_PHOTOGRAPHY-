@@ -21,10 +21,36 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
             border-radius: 10px;
         }
-        img.logo {
-            width: 150px; /* Größe des Logos */
+        .logo-container {
+            position: relative;
+            display: inline-block;
+            width: 200px; /* Größe des Logos */
             margin-bottom: 20px;
-            border-radius: 50%; /* Runde Form */
+        }
+        .logo {
+            width: 100%;
+        }
+        .shine {
+            position: absolute;
+            top: 0;
+            left: -150%; /* Startpunkt außerhalb des Logos */
+            width: 150%;
+            height: 100%;
+            background: linear-gradient(
+                120deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.8) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            animation: shine 2.5s infinite; /* Animation, läuft 2.5s und wiederholt sich */
+        }
+        @keyframes shine {
+            0% {
+                left: -150%;
+            }
+            100% {
+                left: 150%;
+            }
         }
         h1 {
             color: #FFD700; /* Gold */
@@ -60,7 +86,10 @@
 </head>
 <body onload="updateCountdown()">
     <div class="container">
-        <img src="https://github.com/EDMULPHOTOGRAPHY/EDMUL_PHOTOGRAPHY-/blob/main/IMG-20250118-WA0066.jpg?raw=true" alt="Edmul Photography Logo" class="logo">
+        <div class="logo-container">
+            <img src="https://github.com/EDMULPHOTOGRAPHY/EDMUL_PHOTOGRAPHY-/blob/main/IMG-20250118-WA0066.jpg?raw=true" alt="Edmul Photography Logo" class="logo">
+            <div class="shine"></div>
+        </div>
         <h1>Redirecting...</h1>
         <p>You will be redirected to your email application in <span id="countdown">3</span> seconds.</p>
         <p>If the redirection does not work, click the link below:</p>
